@@ -5,12 +5,12 @@
 </ng-container>
 
 <ng-template #higherPrice>
-    <button type="button">Price is {{product.price}} so Notify Me</button>
+    <button type="button" (click)="sendNotification('test string')">Price is {{product && product.price}} so Notify Me</button>
 </ng-template>
 
 <ng-template #lowerPrice>
     <h4 id="my-cheap-message">
-        Price is {{product.price}}, Too Cheap to Notify.
+        Price is {{product && product.price}}, Too Cheap to Notify.
     </h4>
 </ng-template>
 
